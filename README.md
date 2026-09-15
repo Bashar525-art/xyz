@@ -30,3 +30,90 @@ If you are developing a production application, we recommend enabling type-aware
 ```
 
 See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+
+
+
+
+
+
+
+
+
+
+
+
+# Projet individuel - XYZ
+
+Programmation Web - L3 MIASHS - 2026 / 2027
+
+- Prénom : **Bashar**
+- Nom : **ALKASER**
+- Adresse mail universitaire : **bashar.alkaser2@etu.univ-lorraine.fr**
+- Groupe de TD : **1**
+- Adresse du dépôt GitHub privé : **à compléter**
+
+## TD 01
+
+### TD 01 - Élements réalisés
+
+- **à compléter**
+
+### TD 01 - Bonus réalisés
+
+- **à compléter**
+
+### TD 01 - Élements non réalisés
+
+- **à compléter**
+
+### TD 01 - Difficultés rencontrées + Solutions appliquées
+
+- **à compléter**
+
+### TD 01 - Déclaration d'usage de l'IA générative
+
+- **à compléter**
+
+## TD 02
+
+### TD 02 - Élements réalisés
+
+- **à compléter**
+
+### TD 02 - Bonus réalisés
+
+- **à compléter**
+
+### TD 02 - Élements non réalisés
+
+- **à compléter**
+
+### TD 02 - Difficultés rencontrées + Solutions appliquées
+
+- **à compléter**
+
+### TD 02 - Déclaration d'usage de l'IA générative
+
+- **à compléter**
+
+## TD 03
+
+### TD 03 - Élements réalisés
+
+- **à compléter**
+
+### TD 03 - Bonus réalisés
+
+- **à compléter**
+
+### TD 03 - Élements non réalisés
+
+- **à compléter**
+
+### TD 03 - Difficultés rencontrées + Solutions appliquées
+
+- **à compléter**
+
+### TD 03 - Déclaration d'usage de l'IA générative
+
+- **à compléter**
