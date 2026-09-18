@@ -1,12 +1,16 @@
 import type { Tweet } from "../types/Tweet";
 import type { ReactElement } from "react";
 import "./TweetPreview.css";
+import { useState } from "react";
 
 type TweetPreviewProps = {
     tweet: Tweet;
+
 }
 
+
 export function TweetPreview({ tweet }: TweetPreviewProps): ReactElement {
+    const [isExpanded, setIsExpanded] = useState(false);
     return (
         <div>
             <p>Le nom est {tweet.authorName}</p>
@@ -17,8 +21,12 @@ export function TweetPreview({ tweet }: TweetPreviewProps): ReactElement {
                     <img className="tweet-image" src={tweet.image.url} alt={tweet.image.alt} />)
             }
 
-            <p>Le contenu : {tweet.content}</p>
-
+            <p> Le contenu : {isExpanded ? tweet.content : tweet.content.slice(0, 180)}</p>
+            {tweet.content.length > 180 && (
+                <button type="button"
+                    onClick={() => setIsExpanded((previous) => !previous)}>
+                    {isExpanded ? "Voir moins" : "Voir plus"}</button>
+            )}
 
         </div>
     );
