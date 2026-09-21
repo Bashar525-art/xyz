@@ -16,7 +16,8 @@ export function TweetPreview({ tweet }: TweetPreviewProps): ReactElement {
             <p>Le nom est {tweet.authorName}</p>
             <p>Le nom d’utilisateur est @{tweet.authorHandle}</p>
             <p>La date est {new Date(tweet.createdAt).toLocaleDateString("fr-FR")}</p>
-            {
+            {   //Comme image est optionnelle, je vérifie sa présence avec && 
+                // avant d’utiliser url et alt. Si elle est absente, React ne produit aucune balise img.
                 tweet.image && (
                     <img className="tweet-image" src={tweet.image.url} alt={tweet.image.alt} />)
             }

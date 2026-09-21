@@ -3,7 +3,7 @@ import type { Tweet } from "../types/Tweet";
 
 export const initialTweets: Tweet[] = [{
     id: "550e8400-e29b-41d4-a716-446655440000",
-    authorName: "Bashar Alkase",
+    authorName: "Bashar Alkaser",
     authorHandle: "Bashar_dev",
     content: "Aujourd’hui, je commence mon premier projet avec React et TypeScript. Je découvre comment organiser mes données et construire une interface étape par étape. Mon objectif : comprendre chaque ligne de mon code !",
     createdAt: "2026-09-15T10:00:00.000Z",

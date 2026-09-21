@@ -1,6 +1,7 @@
 import './App.css'
-import { initialTweets } from "./data/tweets";
-import { TweetsList } from "./components/TweetsList";
+import { Outlet } from 'react-router-dom';
+
+
 
 function App() {
 
@@ -9,10 +10,10 @@ function App() {
 
     <main>
       <h1>XYZ — Fil de tweets</h1>
-      <TweetsList tweets={initialTweets} />
+      <Outlet />
     </main>
   );
 
 }
 
-export default App
+export default App;

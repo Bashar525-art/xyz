@@ -56,23 +56,42 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Élements réalisés
 
-- **à compléter**
+- Création des types `Tweet` et `TweetImage`.
+- Création d'un jeu de données contenant 10 tweets.
+- Création du composant `TweetPreview` pour afficher un tweet.
+- Création du composant `TweetsList` pour afficher la liste des tweets.
+- Utilisation de `.map()` pour parcourir et afficher les tweets.
+- Affichage du nom de l'auteur, du pseudo, du contenu et de la date.
+- Gestion d'une image optionnelle dans un tweet.
+- Affichage des dates au format français.
+- Intégration de la liste des tweets dans l'application.
+
 
 ### TD 01 - Bonus réalisés
 
-- **à compléter**
+- Aucun bonus réalisé.
 
 ### TD 01 - Élements non réalisés
 
-- **à compléter**
+- Aucun élément obligatoire non réalisé.
 
 ### TD 01 - Difficultés rencontrées + Solutions appliquées
 
-- **à compléter**
+- Difficulté à comprendre le passage des données entre `App`, `TweetsList` et `TweetPreview`.
+  Solution : utilisation des props pour transmettre le tableau de tweets puis chaque tweet individuellement.
+
+- Difficulté avec le typage des props en TypeScript.
+  Solution : création de types pour préciser les données attendues par les composants.
+
+- Difficulté avec l'affichage conditionnel des images.
+  Solution : vérification de la présence de l'image avant son affichage.
+
 
 ### TD 01 - Déclaration d'usage de l'IA générative
 
-- **à compléter**
+- Utilisation de ChatGPT comme aide à la compréhension du TypeScript et de React.
+- L'IA a été utilisée pour expliquer certaines syntaxes, le fonctionnement des props, de `.map()` et du typage.
+- Le code a été relu, testé et compris avant son intégration au projet
 
 ## TD 02
 
