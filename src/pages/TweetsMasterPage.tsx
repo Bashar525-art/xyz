@@ -5,7 +5,9 @@ import { TweetsList } from "../components/TweetsList";
 function TweetsMasterPage() {
     return (
         <main>
-            <TweetsList tweets={initialTweets} />
+            <TweetsList tweets={initialTweets.filter((tweet) => tweet.parentId === undefined)}
+            />
+
         </main>
     );
 }

@@ -2,25 +2,45 @@ import type { Tweet } from "../types/Tweet";
 import type { ReactElement } from "react";
 import "./TweetPreview.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 
 type TweetPreviewProps = {
     tweet: Tweet;
+    linkToDetail?: boolean;
 
 }
 
 
-export function TweetPreview({ tweet }: TweetPreviewProps): ReactElement {
+export function TweetPreview({ tweet, linkToDetail = true }: TweetPreviewProps): ReactElement {
     const [isExpanded, setIsExpanded] = useState(false);
     return (
         <div>
             <p>Le nom est {tweet.authorName}</p>
             <p>Le nom d’utilisateur est @{tweet.authorHandle}</p>
             <p>La date est {new Date(tweet.createdAt).toLocaleDateString("fr-FR")}</p>
-            {   //Comme image est optionnelle, je vérifie sa présence avec && 
-                // avant d’utiliser url et alt. Si elle est absente, React ne produit aucune balise img.
-                tweet.image && (
-                    <img className="tweet-image" src={tweet.image.url} alt={tweet.image.alt} />)
-            }
+            {linkToDetail && (
+                <Link to={"/tweets/" + tweet.id}> Voir la discussion</Link>
+            )}
+            {tweet.image && (  //si l'image existe , on regarde si linkToDetail existe si oui avec link sinon sans link 
+                linkToDetail
+                    ? (
+                        <Link to={"/tweets/" + tweet.id}>
+                            <img
+                                className="tweet-image"
+                                src={tweet.image.url}
+                                alt={tweet.image.alt}
+                            />
+                        </Link>
+                    )
+                    : (
+                        <img
+                            className="tweet-image"
+                            src={tweet.image.url}
+                            alt={tweet.image.alt}
+                        />
+                    )
+            )}
 
             <p> Le contenu : {isExpanded ? tweet.content : tweet.content.slice(0, 180)}</p>
             {tweet.content.length > 180 && (

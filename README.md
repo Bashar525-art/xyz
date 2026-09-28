@@ -89,31 +89,47 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Déclaration d'usage de l'IA générative
 
-- Utilisation de ChatGPT comme aide à la compréhension du TypeScript et de React.
 - L'IA a été utilisée pour expliquer certaines syntaxes, le fonctionnement des props, de `.map()` et du typage.
 - Le code a été relu, testé et compris avant son intégration au projet
 
 ## TD 02
 
-### TD 02 - Élements réalisés
+### TD 02 - Éléments réalisés
 
-- **à compléter**
+- Mise en place de la navigation avec React Router (`BrowserRouter`, `Routes` et `Route`).
+- Création d'un layout commun avec `App` et `Outlet`.
+- Création de la page principale `TweetsMasterPage`.
+- Création de la page de détail `TweetDetailsPage`.
+- Ajout de liens avec `Link` pour accéder à la discussion d'un tweet.
+- Ajout de `parentId` pour représenter les réponses aux tweets.
+- Filtrage de la page principale pour afficher uniquement les tweets principaux.
+- Récupération de l'identifiant d'un tweet avec `useParams`.
+- Recherche du tweet sélectionné et de ses réponses.
+- Affichage des réponses avec `TweetsList`.
+- Gestion du cas où un tweet n'existe pas.
+- Ajout de la prop optionnelle `linkToDetail` dans `TweetPreview`.
+- Création de `NotFoundPage` pour gérer les routes inconnues.
 
 ### TD 02 - Bonus réalisés
 
-- **à compléter**
+- Aucun bonus réalisé.
 
-### TD 02 - Élements non réalisés
+### TD 02 - Éléments non réalisés
 
-- **à compléter**
+- Aucun élément obligatoire non réalisé.
 
 ### TD 02 - Difficultés rencontrées + Solutions appliquées
 
-- **à compléter**
+- difficulté à comprendre le fonctionnement de `BrowserRouter`, `Routes`, `Route` et `Outlet` : reprise du cheminement de l'URL jusqu'au composant affiché.
+- difficulté à comprendre la différence entre `id` et `parentId` : utilisation de `id` pour identifier un tweet et de `parentId` pour relier une réponse à son tweet parent.
+- difficulté avec `.find()` et `.filter()` : `.find()` est utilisé pour récupérer un seul tweet et `.filter()` pour récupérer plusieurs réponses.
+- difficulté avec l'affichage conditionnel : utilisation de `&&` et de l'opérateur ternaire `? :`.
+- difficulté avec `linkToDetail` : ajout d'une valeur par défaut à `true` et passage à `false` sur la page de détail.
 
 ### TD 02 - Déclaration d'usage de l'IA générative
 
-- **à compléter**
+- L'IA a été utilisée pour expliquer les notions de routage, `useParams`, `Outlet`, les props, `.find()`, `.filter()` et l'affichage conditionnel.
+- Les différentes étapes ont été réalisées progressivement, testées et vérifiées dans l'application.
 
 ## TD 03
 

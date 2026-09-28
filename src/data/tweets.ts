@@ -15,6 +15,7 @@ export const initialTweets: Tweet[] = [{
     authorHandle: "lina_code",
     content: "Première victoire du jour : mon application démarre sans erreur !",
     createdAt: "2026-09-15T08:30:00.000Z",
+    parentId: "550e8400-e29b-41d4-a716-446655440000",
 },
 {
     id: "550e8400-e29b-41d4-a716-446655440002",
@@ -29,6 +30,7 @@ export const initialTweets: Tweet[] = [{
     authorHandle: "sarah_design",
     content: "Une interface claire commence par des informations faciles à lire.",
     createdAt: "2026-09-15T09:30:00.000Z",
+    parentId: "550e8400-e29b-41d4-a716-446655440002"
 },
 {
     id: "550e8400-e29b-41d4-a716-446655440004",
