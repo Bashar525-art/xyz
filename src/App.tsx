@@ -3,7 +3,7 @@ import './App.css'
 import { Outlet } from 'react-router-dom';
 import type { Tweet } from './types/Tweet';
 import { initialTweets } from './data/tweets';
-import { TweetsContext, type TweetsContextValue } from './contexts/TweetContext';
+import { TweetsContext, type TweetsContextValue } from './contexts/TweetsContext';
 
 
 

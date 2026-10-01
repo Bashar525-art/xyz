@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useDocumentTitle } from "../hooks/useDocument";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 
 function NotFoundPage() {

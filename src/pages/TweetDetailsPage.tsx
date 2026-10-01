@@ -2,8 +2,8 @@ import { Link, useParams } from "react-router-dom";
 import { TweetPreview } from "../components/TweetPreview";
 import { TweetsList } from "../components/TweetsList";
 import { useContext } from "react";
-import { TweetsContext } from "../contexts/TweetContext";
-import { useDocumentTitle } from "../hooks/useDocument";
+import { TweetsContext } from "../contexts/TweetsContext";
+import { useDocumentTitle } from "../hooks/useDocumentTitle";
 
 function TweetDetailsPage() {
 
