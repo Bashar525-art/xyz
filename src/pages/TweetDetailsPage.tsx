@@ -1,16 +1,19 @@
 import { Link, useParams } from "react-router-dom";
-import { initialTweets } from "../data/tweets";
 import { TweetPreview } from "../components/TweetPreview";
 import { TweetsList } from "../components/TweetsList";
-
-
+import { useContext } from "react";
+import { TweetsContext } from "../contexts/TweetContext";
+import { useDocumentTitle } from "../hooks/useDocument";
 
 function TweetDetailsPage() {
 
-
+    const { tweets, toggleLike } = useContext(TweetsContext)!;
     const { id } = useParams<{ id: string }>();
-    const tweet = initialTweets.find((tweet) => tweet.id === id);
-    const reponseTweet = initialTweets.filter((reponseTweet) => reponseTweet.parentId === id);
+    const tweet = tweets.find((tweet) => tweet.id === id);
+    useDocumentTitle(
+        tweet ? `Tweet de ${tweet.authorName}` : "Tweet introuvable"
+    );
+    const reponseTweet = tweets.filter((reponseTweet) => reponseTweet.parentId === id);
 
 
 
@@ -23,14 +26,21 @@ function TweetDetailsPage() {
 
 
     return (<div>
-        <TweetPreview tweet={tweet} linkToDetail={false} />
+        <TweetPreview
+            tweet={tweet}
+            linkToDetail={false}
+            onToggleLike={toggleLike}
+        />
 
 
         {reponseTweet.length === 0
 
 
             ? <p>la list est vide</p>
-            : <TweetsList tweets={reponseTweet} />
+            : <TweetsList
+                tweets={reponseTweet}
+                onToggleLike={toggleLike}
+            />
         }
 
     </div>

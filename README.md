@@ -50,7 +50,7 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 - Nom : **ALKASER**
 - Adresse mail universitaire : **bashar.alkaser2@etu.univ-lorraine.fr**
 - Groupe de TD : **1**
-- Adresse du dépôt GitHub privé : **à compléter**
+- Adresse du dépôt GitHub privé : **https://github.com/Bashar525-art/xyz**
 
 ## TD 01
 

@@ -8,14 +8,15 @@ import { Link } from "react-router-dom";
 type TweetPreviewProps = {
     tweet: Tweet;
     linkToDetail?: boolean;
+    onToggleLike: (id: string) => void;
 
-}
+};
 
 
-export function TweetPreview({ tweet, linkToDetail = true }: TweetPreviewProps): ReactElement {
+export function TweetPreview({ tweet, linkToDetail = true, onToggleLike }: TweetPreviewProps): ReactElement {
     const [isExpanded, setIsExpanded] = useState(false);
     return (
-        <div>
+        <div className="tweet-card">
             <p>Le nom est {tweet.authorName}</p>
             <p>Le nom d’utilisateur est @{tweet.authorHandle}</p>
             <p>La date est {new Date(tweet.createdAt).toLocaleDateString("fr-FR")}</p>
@@ -47,8 +48,15 @@ export function TweetPreview({ tweet, linkToDetail = true }: TweetPreviewProps):
                 <button type="button"
                     onClick={() => setIsExpanded((previous) => !previous)}>
                     {isExpanded ? "Voir moins" : "Voir plus"}</button>
-            )}
 
+
+            )}
+            <button
+                type="button"
+                onClick={() => onToggleLike(tweet.id)}
+            >
+                {tweet.likedByMe ? "Je n'aime plus" : "J'aime"} ({tweet.likes})
+            </button>
         </div>
     );
 
