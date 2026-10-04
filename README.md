@@ -68,7 +68,11 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Bonus réalisés
 
-- Aucun bonus réalisé.
+-Ajout d'un compteur affichant le nombre total de tweets du fil.
+
+Tri des tweets du plus récent au plus ancien, sans modifier le tableau d'origine.
+
+Création d'un composant Avatar réutilisable qui affiche les initiales de l'auteur dans un cercle.
 
 ### TD 01 - Élements non réalisés
 
@@ -108,7 +112,11 @@ L'IA m'a également donné des exemples de code et m'a aidé à corriger certain
 
 ### TD 02 - Bonus réalisés
 
-- Aucun bonus réalisé.
+Création d'une page /a-propos présentant rapidement l'application XYZ.
+
+Ajout de deux liens dans le header pour naviguer entre l'accueil et la page À propos.
+
+Ajout d'un fil d'Ariane sur la page de détail d'un tweet, permettant de revenir facilement à l'accueil.
 
 ### TD 02 - Éléments non réalisés
 
