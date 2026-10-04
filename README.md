@@ -1,43 +1,3 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
-
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
-
-
-
-
-
-
-
-
 
 
 
@@ -68,11 +28,10 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Bonus réalisés
 
--Ajout d'un compteur affichant le nombre total de tweets du fil.
+- Ajout d'un compteur affichant le nombre total de tweets du fil.
+- Tri des tweets du plus récent au plus ancien, sans modifier le tableau d'origine.
+- Création d'un composant Avatar réutilisable qui affiche les initiales de l'auteur dans un cercle.
 
-Tri des tweets du plus récent au plus ancien, sans modifier le tableau d'origine.
-
-Création d'un composant Avatar réutilisable qui affiche les initiales de l'auteur dans un cercle.
 
 ### TD 01 - Élements non réalisés
 
@@ -86,6 +45,7 @@ J'ai aussi eu quelques difficultés avec la syntaxe TypeScript, notamment pour d
 
 Pour les images, j'ai utilisé un affichage conditionnel afin de ne pas essayer d'afficher une image lorsqu'un tweet n'en possède pas.
 
+Ce premier TD m'a surtout permis de mieux comprendre le fonctionnement des composants React, le passage des données avec les props et l'utilisation des types TypeScript.
 
 ### TD 01 - Déclaration d'usage de l'IA générative
 
@@ -112,11 +72,9 @@ L'IA m'a également donné des exemples de code et m'a aidé à corriger certain
 
 ### TD 02 - Bonus réalisés
 
-Création d'une page /a-propos présentant rapidement l'application XYZ.
-
-Ajout de deux liens dans le header pour naviguer entre l'accueil et la page À propos.
-
-Ajout d'un fil d'Ariane sur la page de détail d'un tweet, permettant de revenir facilement à l'accueil.
+- Création d'une page /a-propos présentant rapidement l'application XYZ.
+- Ajout de deux liens dans le header pour naviguer entre l'accueil et la page À propos.
+- Ajout d'un fil d'Ariane sur la page de détail d'un tweet.
 
 ### TD 02 - Éléments non réalisés
 
@@ -131,6 +89,8 @@ J'ai également confondu id et parentId. J'ai compris que id sert à identifier 
 Une autre difficulté concernait .find() et .filter(). J'ai utilisé .find() pour récupérer le tweet demandé et .filter() pour récupérer toutes ses réponses.
 
 Enfin, j'ai dû revoir l'affichage conditionnel, notamment avec && et l'opérateur ternaire.
+
+J'ai appris à organiser une application avec plusieurs pages et à utiliser les paramètres d'URL pour retrouver les données correspondantes.
 
 ### TD 02 - Déclaration d'usage de l'IA générative
 
@@ -179,6 +139,8 @@ J'ai également rencontré des erreurs TypeScript en transmettant onToggleLike e
 Enfin, j'ai dû corriger quelques erreurs dans les noms des fichiers et dans les imports. Une erreur de compilation venait aussi d'un caractère ajouté accidentellement dans NotFoundPage.tsx.
 
 Après les corrections, j'ai relancé les trois commandes de vérification et elles se sont exécutées sans erreur.
+
+J'ai découvert comment gérer un état partagé entre plusieurs composants, comment transmettre des fonctions avec les props et pourquoi il est important de ne pas modifier directement les données d'un état React.
 
 ### TD 03 - Déclaration d'usage de l'IA générative
 

@@ -8,8 +8,12 @@ import { useDocumentTitle } from "../hooks/useDocumentTitle";
 function TweetDetailsPage() {
 
     const { tweets, toggleLike } = useContext(TweetsContext)!;
+
+    // Récupère l'identifiant du tweet directement depuis l'URL
     const { id } = useParams<{ id: string }>();
     const tweet = tweets.find((tweet) => tweet.id === id);
+    // Modifie le titre de l'onglet selon que le tweet existe ou non
+    // Le hook est appelé avant le if pour respecter les règles de React
     useDocumentTitle(
         tweet ? `Tweet de ${tweet.authorName}` : "Tweet introuvable"
     );
@@ -28,7 +32,11 @@ function TweetDetailsPage() {
     return (<div>
         <nav className="breadcrumb" aria-label="Fil d'Ariane">
             <Link to="/">Accueil</Link>
+
+            {/* Séparateur entre l'accueil et la page actuelle */}
             <span aria-hidden="true"> › </span>
+
+            {/* aria-current indique qu'il s'agit de la page actuelle */}
             <span aria-current="page">
                 Tweet de {tweet.authorName}
             </span>

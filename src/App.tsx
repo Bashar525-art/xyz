@@ -56,7 +56,7 @@ function App() {
     <main>
       <header className="app-header">
         <img
-          src="/xyz-logo.png"
+          src="/favicon.svg"
           alt="Logo de XYZ"
           className="app-logo"
         />
@@ -64,6 +64,7 @@ function App() {
         <nav className="app-navigation">
           <Link to="/">Accueil</Link>
           <Link to="/a-propos">À propos</Link>
+
         </nav>
       </header>
       <TweetsContext.Provider value={context}>
