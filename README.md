@@ -56,15 +56,14 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Élements réalisés
 
-- Création des types `Tweet` et `TweetImage`.
-- Création d'un jeu de données contenant 10 tweets.
-- Création du composant `TweetPreview` pour afficher un tweet.
-- Création du composant `TweetsList` pour afficher la liste des tweets.
-- Utilisation de `.map()` pour parcourir et afficher les tweets.
-- Affichage du nom de l'auteur, du pseudo, du contenu et de la date.
-- Gestion d'une image optionnelle dans un tweet.
+- Création des types Tweet et TweetImage.
+- Création d'un tableau contenant 10 tweets.
+- Création de TweetPreview pour afficher les informations d'un tweet.
+- Création de TweetsList pour afficher tous les tweets avec .map().
+- Affichage du nom de l'auteur, du pseudo, de la date et du contenu.
 - Affichage des dates au format français.
-- Intégration de la liste des tweets dans l'application.
+- Gestion des tweets avec ou sans image.
+- Intégration des composants dans App.tsx.
 
 
 ### TD 01 - Bonus réalisés
@@ -77,38 +76,35 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 01 - Difficultés rencontrées + Solutions appliquées
 
-- Difficulté à comprendre le passage des données entre `App`, `TweetsList` et `TweetPreview`.
-  Solution : utilisation des props pour transmettre le tableau de tweets puis chaque tweet individuellement.
+Au début, j'avais surtout du mal à comprendre comment les données passaient de App vers TweetsList, puis vers TweetPreview. J'ai repris le fonctionnement des props avec des exemples pour mieux comprendre ce que chaque composant reçoit.
 
-- Difficulté avec le typage des props en TypeScript.
-  Solution : création de types pour préciser les données attendues par les composants.
+J'ai aussi eu quelques difficultés avec la syntaxe TypeScript, notamment pour déclarer les types des props et utiliser .map().
 
-- Difficulté avec l'affichage conditionnel des images.
-  Solution : vérification de la présence de l'image avant son affichage.
+Pour les images, j'ai utilisé un affichage conditionnel afin de ne pas essayer d'afficher une image lorsqu'un tweet n'en possède pas.
 
 
 ### TD 01 - Déclaration d'usage de l'IA générative
 
-- L'IA a été utilisée pour expliquer certaines syntaxes, le fonctionnement des props, de `.map()` et du typage.
-- Le code a été relu, testé et compris avant son intégration au projet
+J'ai utilisé ChatGPT pour m'aider à comprendre certaines notions, notamment les props, le typage TypeScript et l'utilisation de .map().
+
+L'IA m'a également donné des exemples de code et m'a aidé à corriger certaines erreurs pendant le TD.
 
 ## TD 02
 
 ### TD 02 - Éléments réalisés
 
-- Mise en place de la navigation avec React Router (`BrowserRouter`, `Routes` et `Route`).
-- Création d'un layout commun avec `App` et `Outlet`.
-- Création de la page principale `TweetsMasterPage`.
-- Création de la page de détail `TweetDetailsPage`.
-- Ajout de liens avec `Link` pour accéder à la discussion d'un tweet.
-- Ajout de `parentId` pour représenter les réponses aux tweets.
-- Filtrage de la page principale pour afficher uniquement les tweets principaux.
-- Récupération de l'identifiant d'un tweet avec `useParams`.
-- Recherche du tweet sélectionné et de ses réponses.
-- Affichage des réponses avec `TweetsList`.
-- Gestion du cas où un tweet n'existe pas.
-- Ajout de la prop optionnelle `linkToDetail` dans `TweetPreview`.
-- Création de `NotFoundPage` pour gérer les routes inconnues.
+- Installation et utilisation de React Router.
+- Mise en place des routes avec BrowserRouter, Routes et Route.
+- Utilisation de Outlet dans App pour garder une partie commune entre les pages.
+- Création de la page principale TweetsMasterPage.
+- Création de TweetDetailsPage pour afficher un tweet et ses réponses.
+- Ajout de liens avec Link pour accéder aux discussions.
+- Ajout de parentId pour relier une réponse à son tweet parent.
+- Filtrage du fil principal pour ne pas afficher directement les réponses.
+- Utilisation de useParams pour récupérer l'identifiant depuis l'URL.
+- Utilisation de .find() et .filter() pour retrouver un tweet et ses réponses.
+- Ajout de linkToDetail pour éviter qu'un tweet renvoie vers sa propre page.
+- Création de NotFoundPage pour les URL inconnues.
 
 ### TD 02 - Bonus réalisés
 
@@ -120,35 +116,80 @@ Programmation Web - L3 MIASHS - 2026 / 2027
 
 ### TD 02 - Difficultés rencontrées + Solutions appliquées
 
-- difficulté à comprendre le fonctionnement de `BrowserRouter`, `Routes`, `Route` et `Outlet` : reprise du cheminement de l'URL jusqu'au composant affiché.
-- difficulté à comprendre la différence entre `id` et `parentId` : utilisation de `id` pour identifier un tweet et de `parentId` pour relier une réponse à son tweet parent.
-- difficulté avec `.find()` et `.filter()` : `.find()` est utilisé pour récupérer un seul tweet et `.filter()` pour récupérer plusieurs réponses.
-- difficulté avec l'affichage conditionnel : utilisation de `&&` et de l'opérateur ternaire `? :`.
-- difficulté avec `linkToDetail` : ajout d'une valeur par défaut à `true` et passage à `false` sur la page de détail.
+J'ai eu du mal au début avec React Router, surtout pour comprendre la différence entre Route, Link et Outlet. J'ai repris le trajet depuis l'URL jusqu'à la page affichée pour mieux comprendre leur rôle.
+
+J'ai également confondu id et parentId. J'ai compris que id sert à identifier un tweet, tandis que parentId permet de savoir à quel tweet une réponse appartient.
+
+Une autre difficulté concernait .find() et .filter(). J'ai utilisé .find() pour récupérer le tweet demandé et .filter() pour récupérer toutes ses réponses.
+
+Enfin, j'ai dû revoir l'affichage conditionnel, notamment avec && et l'opérateur ternaire.
 
 ### TD 02 - Déclaration d'usage de l'IA générative
 
-- L'IA a été utilisée pour expliquer les notions de routage, `useParams`, `Outlet`, les props, `.find()`, `.filter()` et l'affichage conditionnel.
-- Les différentes étapes ont été réalisées progressivement, testées et vérifiées dans l'application.
+J'ai utilisé ChatGPT pour avoir des explications sur React Router, useParams, Outlet et le fonctionnement des pages.
+
+L'IA m'a aussi proposé des exemples de code et aidé à identifier certaines erreurs. J'ai avancé progressivement en testant les différentes fonctionnalités dans le navigateur.
 
 ## TD 03
 
-### TD 03 - Élements réalisés
+### TD 03 - Éléments réalisés
 
-- **à compléter**
+- Ajout de likes et likedByMe au type Tweet et aux données initiales.
+- Déplacement de l'état des tweets dans App avec useState.
+- Création de TweetsContext pour partager les données entre les pages.
+- Création d'un formulaire contrôlé TweetForm.
+- Limitation du contenu à 280 caractères avec affichage des caractères restants.
+- Désactivation du bouton Publier lorsque le contenu est vide ou invalide.
+- Création de addTweet pour ajouter un nouveau tweet en haut du fil.
+- Réinitialisation du formulaire après la publication.
+- Création de toggleLike pour aimer ou retirer un J'aime.
+- Transmission de cette fonction entre les composants avec les props.
+- Synchronisation des likes entre la page principale et les discussions.
+- Affichage du total des likes des tweets du fil principal.
+- Création du hook useDocumentTitle avec useEffect pour changer le titre de l'onglet selon la page.
+- Personnalisation de l'interface avec les couleurs fournies dans le TD.
+- Travail sur le logo et le favicon de XYZ.
 
 ### TD 03 - Bonus réalisés
 
-- **à compléter**
+- Aucun bonus facultatif réalisé.
 
-### TD 03 - Élements non réalisés
+### TD 03 - Éléments non réalisés
 
-- **à compléter**
+- Aucun élément obligatoire restant identifié.
 
 ### TD 03 - Difficultés rencontrées + Solutions appliquées
 
-- **à compléter**
+Ce TD a été celui où j'ai rencontré le plus de difficultés, notamment avec la gestion des états dans React.
+
+Au départ, je ne comprenais pas vraiment pourquoi il fallait mettre les tweets dans App ni comment useContext permettait de les partager entre plusieurs pages. J'ai repris ces notions avec des exemples plus simples avant de les appliquer au projet.
+
+La partie la plus compliquée pour moi a été toggleLike. J'avais du mal à comprendre comment parcourir les tweets avec .map(), retrouver le bon tweet et modifier uniquement ses likes sans toucher directement à l'objet d'origine. J'ai donc décomposé le problème en plusieurs étapes pour comprendre la logique.
+
+J'ai également rencontré des erreurs TypeScript en transmettant onToggleLike entre les composants. J'ai corrigé les types et ajouté les props manquantes.
+
+Enfin, j'ai dû corriger quelques erreurs dans les noms des fichiers et dans les imports. Une erreur de compilation venait aussi d'un caractère ajouté accidentellement dans NotFoundPage.tsx.
+
+Après les corrections, j'ai relancé les trois commandes de vérification et elles se sont exécutées sans erreur.
 
 ### TD 03 - Déclaration d'usage de l'IA générative
 
-- **à compléter**
+
+J'ai utilisé ChatGPT (OpenAI) pendant ce TD, principalement pour m'expliquer les notions que je ne comprenais pas et m'aider à avancer lorsque j'étais bloqué.
+
+L'IA m'a notamment aidé sur useState, useContext, useEffect, les callbacks, .map() et le principe d'immutabilité dans React.
+
+Elle m'a aussi proposé plusieurs extraits de code, notamment pour la gestion des likes, ainsi que des modifications CSS pour l'apparence de l'application.
+
+J'ai intégré les propositions dans mon projet, effectué les corrections nécessaires et testé le résultat avec les commandes demandées dans le TD.
+
+
+### Vérifications finales
+
+Après les dernières corrections, j'ai exécuté les commandes suivantes :
+
+bun run lint : 0 warning et 0 erreur.
+
+bun tsc --noEmit : aucune erreur.
+
+bun run build : compilation réussie.

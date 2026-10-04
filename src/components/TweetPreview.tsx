@@ -3,6 +3,7 @@ import type { ReactElement } from "react";
 import "./TweetPreview.css";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Avatar } from "./Avatar";
 
 
 type TweetPreviewProps = {
@@ -17,7 +18,10 @@ export function TweetPreview({ tweet, linkToDetail = true, onToggleLike }: Tweet
     const [isExpanded, setIsExpanded] = useState(false);
     return (
         <div className="tweet-card">
-            <p>Le nom est {tweet.authorName}</p>
+            <div className="tweet-author">
+                <Avatar authorName={tweet.authorName} />
+                <p>Le nom est {tweet.authorName}</p>
+            </div>
             <p>Le nom d’utilisateur est @{tweet.authorHandle}</p>
             <p>La date est {new Date(tweet.createdAt).toLocaleDateString("fr-FR")}</p>
             {linkToDetail && (

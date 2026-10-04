@@ -5,3 +5,9 @@
     height: auto;
     border-radius: 12px;
 }
+
+.tweet-author {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}

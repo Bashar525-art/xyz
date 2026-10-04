@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './App.css'
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from "react-router-dom";
 import type { Tweet } from './types/Tweet';
 import { initialTweets } from './data/tweets';
 import { TweetsContext, type TweetsContextValue } from './contexts/TweetsContext';
@@ -61,6 +61,10 @@ function App() {
           className="app-logo"
         />
         <h1>XYZ — Fil de tweets</h1>
+        <nav className="app-navigation">
+          <Link to="/">Accueil</Link>
+          <Link to="/a-propos">À propos</Link>
+        </nav>
       </header>
       <TweetsContext.Provider value={context}>
         <Outlet />

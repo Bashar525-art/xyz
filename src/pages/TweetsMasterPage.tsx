@@ -10,6 +10,9 @@ function TweetsMasterPage() {
     const filTweets = tweets.filter(
         (tweet) => tweet.parentId === undefined
     );
+    const tweetsTries = [...filTweets].sort((a, b) =>
+        b.createdAt.localeCompare(a.createdAt)
+    );
 
     const totalLikes = filTweets.reduce(
         (total, tweet) => total + tweet.likes,
@@ -19,9 +22,10 @@ function TweetsMasterPage() {
     return (
         <main>
             <TweetForm onSubmit={addTweet} />
+            <p>Nombre de tweets du fil : {filTweets.length}</p>
             <p>Total des J'aime reçus : {totalLikes}</p>
             <TweetsList
-                tweets={filTweets}
+                tweets={tweetsTries}
                 onToggleLike={toggleLike}
             />
         </main>

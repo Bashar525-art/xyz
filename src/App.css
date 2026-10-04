@@ -63,3 +63,55 @@
     height: 38px;
   }
 }
+
+
+.app-navigation {
+  display: flex;
+  gap: 15px;
+  margin-left: auto;
+}
+
+.app-navigation a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.app-navigation a:hover {
+  color: #e52e62;
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .app-header {
+    flex-wrap: wrap;
+  }
+
+  .app-navigation {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Fil d'Ariane sur la page de détail */
+
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  margin-bottom: 15px;
+
+  background: #e6e6e6;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.breadcrumb a {
+  color: #51b1ce;
+  font-weight: bold;
+}
+
+.breadcrumb a:hover {
+  color: #e52e62;
+}

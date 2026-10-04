@@ -26,6 +26,13 @@ function TweetDetailsPage() {
 
 
     return (<div>
+        <nav className="breadcrumb" aria-label="Fil d'Ariane">
+            <Link to="/">Accueil</Link>
+            <span aria-hidden="true"> › </span>
+            <span aria-current="page">
+                Tweet de {tweet.authorName}
+            </span>
+        </nav>
         <TweetPreview
             tweet={tweet}
             linkToDetail={false}

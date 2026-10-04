@@ -8,6 +8,7 @@ import { Route } from 'react-router-dom' // représente une règle : pour telle 
 import TweetsMasterPage from './pages/TweetsMasterPage.tsx'
 import TweetDetailsPage from './pages/TweetDetailsPage.tsx'
 import NotFoundPage from './pages/NotFoundPage.tsx'
+import AboutPage from "./pages/AboutPages.tsx";
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById('root')!).render(
           <Route index element={<TweetsMasterPage />} />
           <Route path='tweets/:id' element={<TweetDetailsPage />} />
           <Route path='*' element={<NotFoundPage />} />
+          <Route path="a-propos" element={<AboutPage />} />
         </Route >
 
       </Routes>
